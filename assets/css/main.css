@@ -1728,7 +1728,7 @@
 				-ms-transition: background-color 0.2s ease-in-out;
 				transition: background-color 0.2s ease-in-out;
 				border-radius: 100%;
-				border: solid 2px rgba(255, 255, 255, 0.125);
+				border: solid 2px rgba(0, 0, 0, 0.125);
 				content: '\f105';
 				display: inline-block;
 				font-size: 1.25em;
@@ -1748,6 +1748,56 @@
 			a.special:not(.button):active:before {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
+a.special_fix:not(.button) {
+			text-decoration: none;
+			border-bottom: 0;
+			display: block;
+			font-family: "Microsoft YaHei",微软雅黑,STHeiti,MingLiu,Raleway, Helvetica, sans-serif;
+			font-size: 0.8em;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			margin: 0 0 2em 0;
+			text-transform: uppercase;
+		}
+
+			a.special_fix:not(.button):before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-transform: none !important;
+			}
+
+			a.special_fix:not(.button):before {
+				-moz-transition: background-color 0.2s ease-in-out;
+				-webkit-transition: background-color 0.2s ease-in-out;
+				-ms-transition: background-color 0.2s ease-in-out;
+				transition: background-color 0.2s ease-in-out;
+				border-radius: 100%;
+				border: solid 2px rgba(0, 0, 0, 0.125);
+				content: '\f105';
+				display: inline-block;
+				font-size: 1.25em;
+				height: 2em;
+				line-height: 1.65em;
+				margin-right: 0.85em;
+				text-align: center;
+				text-indent: 0.15em;
+				vertical-align: middle;
+				width: 2em;
+			}
+
+			a.special_fix:not(.button):hover:before {
+				background-color: rgba(255, 255, 255, 0.025);
+			}
+
+			a.special_fix:not(.button):active:before {
+				background-color: rgba(255, 255, 255, 0.075);
+			}
+
+
+
 
 	strong, b {
 		color: #ffffff;
@@ -3025,7 +3075,7 @@
 /* Banner */
 
 	#banner {
-		padding: 5em 0 9.75em 0 ;
+		padding: 8em 0 12.8em 0 ;
 	}
 
 		#banner .inner {
@@ -3698,7 +3748,39 @@
 		}
 
 	}
+@media screen and (max-width: 1680px) {
+}
 
-#one,#one h2{color: black;}
+#one,#one h2,#one a{color: black;}
 #one{background: #fff;}
-#one h2.major{}
+
+
+#banner a.botton_fix{
+   text-decoration: none;
+    background-color:rgba(78,163,216,1) !important;
+    color: white ;
+		border-radius: 5px;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-family:"Microsoft YaHei",微软雅黑,STHeiti,MingLiu, Raleway, Helvetica, sans-serif;
+		font-size: 0.8em;
+		font-weight: 400;
+		height: 3.25em;
+		letter-spacing: 0.1em;
+		line-height: 3.25em;
+		padding: 0 2.25em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+
+}
+#banner a.botton_fix:hover{
+   color: #ffffff !important;
+    -moz-transition: all 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-webkit-transition: all 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
