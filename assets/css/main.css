@@ -3507,7 +3507,7 @@ a.special_fix:not(.button) {
 		@media screen and (max-width: 980px) {
 
 			.wrapper {
-				margin: 4.75em 0;
+/*				margin: 4.75em 0;*/
 			}
 
 				.wrapper:before, .wrapper:after {
@@ -3542,7 +3542,7 @@ a.special_fix:not(.button) {
 		@media screen and (max-width: 736px) {
 
 			.wrapper {
-				margin: 2.5em 0;
+/*				margin: 2.5em 0;*/
 			}
 
 				.wrapper:before, .wrapper:after {
@@ -3764,7 +3764,7 @@ border-bottom:1px solid #eaeaea; }
             transition: color 0.4s ease-in-out;
 }
 
-#one a.fix_a:hover{color: cornflowerblue; !important;}
+#one a.fix_a:hover,#two a.fix_a:hover,#three a.fix_a:hover{color: cornflowerblue; !important;}
 #banner a.botton_fix{
    text-decoration: none;
     background-color:rgba(78,163,216,1) !important;
