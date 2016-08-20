@@ -1698,7 +1698,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff !important;
+			color: #ffffff;
 		}
 
 		a.special:not(.button) {
@@ -2490,6 +2490,7 @@ a.special_fix:not(.button) {
 			border: solid 1px rgba(255, 255, 255, 0.125);
 			border-left: 0;
 			border-right: 0;
+
 		}
 
 			table tbody tr:nth-child(2n + 1) {
@@ -3434,7 +3435,7 @@ a.special_fix:not(.button) {
 			}
 
 			.wrapper.spotlight .image {
-				border-radius: 100%;
+				border-radius: 20%;
 				margin: 0 3em 2em 0;
 				width: 22em;
 				overflow: hidden;
@@ -3442,7 +3443,7 @@ a.special_fix:not(.button) {
 			}
 
 				.wrapper.spotlight .image img {
-					border-radius: 100%;
+					border-radius: 20%;
 					width: 100%;
 				}
 
@@ -3751,10 +3752,19 @@ a.special_fix:not(.button) {
 @media screen and (max-width: 1680px) {
 }
 
-#one,#one h2,#one a{color: black;}
-#one{background: #fff;}
+#one,#one h2,#one a,#three h2,#three a{color: #707070;}
+#one,#three{background: #fff;color: #707070;}
+#two{background: #f7f7f7; color: #707085;border-top: 1px solid #eaeaea;
+border-bottom:1px solid #eaeaea; }
+#two a,#two h2{color: #707070;}
+#one a.fix_a{
+     -moz-transition: color 0.4s ease-in-out;
+            -webkit-transition: color 0.4s ease-in-out;
+            -ms-transition: color 0.4s ease-in-out;
+            transition: color 0.4s ease-in-out;
+}
 
-
+#one a.fix_a:hover{color: cornflowerblue; !important;}
 #banner a.botton_fix{
    text-decoration: none;
     background-color:rgba(78,163,216,1) !important;

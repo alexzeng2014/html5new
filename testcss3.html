@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test CSS3</title>
+
+    <STYLE>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul{list-style: none}
+
+        html {
+            font-size: 100%
+        }
+
+        .testcss {
+            background-color: #666;
+            color: #fff;
+            margin: 1.25em auto;
+            padding: 2em;
+        }
+
+        #unit1{clear: both;}
+
+        #unit1 a {
+            display: block;
+            margin: 0 auto;
+            padding: 1em;
+            color: aliceblue;
+            text-decoration: none;
+            text-align: center;
+            -moz-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+            -webkit-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+            -ms-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+            transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #unit1 a:hover {
+            color: beige;
+            background-color: cadetblue;
+        }
+
+         .menu ul {
+    border-top: 15px solid black;
+    padding: 0 10px;
+ }
+ .menu ul li a{
+    color: #fff;
+    float: left;
+    margin: 0 5px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 65px;
+    padding: 10px 5px;
+    background: #151515;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    -moz-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    -webkit-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    text-shadow: 0 1px 1px #686868;
+    text-decoration: none;
+     display: block;
+ }
+ .menu ul li.translate a{
+    background: #2EC7D2;
+ }
+ .menu ul li.translate-x a {
+    background: #8FDD21;
+ }
+ .menu ul li.translate-y a {
+    background: #F45917;
+ }
+ .menu ul li.rotate a {
+    background: #D50E19;
+ }
+ .menu ul li.scale a {
+    background: #cdddf2;
+ }
+ .menu ul li.scale-x a {
+   background: #0fDD21;
+ }
+ .menu ul li.scale-y a {
+   background: #cd5917;
+ }
+ .menu ul li.skew a {
+   background: #519;
+ }
+ .menu ul li.skew-x a {
+   background: #D50;
+ }
+ .menu ul li.skew-y a {
+   background: #E19;
+ }
+ .menu ul li.matrix a {
+   background: #919;
+ }
+/*        平移*/
+          .menu ul li.translate a:hover {
+     -moz-transform: translate(-10px,0px);
+     -webkit-transform: translate(-10px,0px);
+     -o-transform: translate(-10px,0px);
+     -ms-transform: translate(-10px,0px);
+     transform: translate(-10px,0px);
+  }
+         .menu ul li.translate-x a:hover {
+    -moz-transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+          .menu ul li.translate-y a:hover {
+     -moz-transform: translateY(-10px);
+     -webkit-transform: translateY(-10px);
+     -o-transform: translateY(-10px);
+     -ms-transform: translateY(-10px);
+     transform: translateY(-10px);
+  }
+
+/*        角度*/
+         .menu ul li.rotate a:hover {
+   -moz-transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+ }
+/*        缩放*/
+         .menu ul li.scale a:hover {
+   -moz-transform: scale(0.8,0.8);
+   -webkit-transform: scale(0.8,0.8);
+   -o-transform: scale(0.8,0.8);
+   -ms-transform: scale(0.8,0.8);
+   transform: scale(0.8,0.8);
+ }
+          .menu ul li.scale-x a:hover {
+    -moz-transform: scaleX(0.8);
+    -webkit-transform: scaleX(0.8);
+    -o-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+ }
+          .menu ul li.scale-y a:hover {
+     -moz-transform: scaleY(1.2);
+     -webkit-transform: scaleY(1.2);
+     -o-transform: scaleY(1.2);
+     -ms-transform: scaleY(1.2);
+     transform: scaleY(1.2);
+ }
+          .menu ul li.skew a:hover {
+     -moz-transform: skew(45deg,15deg);
+     -webkit-transform: skew(45deg,15deg);
+     -o-transform: skew(45deg,15deg);
+     -ms-transform: skew(45deg,15deg);
+     transform: skew(45deg,15deg);
+  }
+        .menu ul li.skew-x a:hover {
+    -moz-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    -o-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+ }
+          .menu ul li.skew-y a:hover {
+    -moz-transform: skewY(30deg);
+    -webkit-transform: skewY(30deg);
+    -o-transform: skewY(30deg);
+    -ms-transform: skewY(30deg);
+    transform: skewY(30deg);
+ }
+          .menu ul li.matrix a:hover {
+    -moz-transform: matrix(1,1,-1,0,0,0);
+    -webkit-transform: matrix(1,1,-1,0,0,0);
+    -o-transform: matrix(1,1,-1,0,0,0);
+    -ms-transform: matrix(1,1,-1,0,0,0);
+    transform: matrix(1,1,-1,0,0,0);
+  }
+
+     #demoSliderContainer {
+  background: #000;
+  -moz-box-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  padding: 0;
+  overflow: auto;
+  margin: 10px auto;
+  width: 560px;
+}
+
+#demoSlider {
+  border: 1px solid #000;
+  border-width: 5px 5px 0;
+  height: 220px;
+  margin: 0 auto;
+  width: 550px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-images .slide-image {
+  position: absolute;
+}
+
+.slide-images .slide-image img {
+  z-index: 2;
+}
+
+.slide-images .slide-image span {
+  background: rgba(0,0,0,0.3);
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+  bottom: 4px;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+.slide-images .slide-image.current img {
+  z-index: 12;
+}
+
+.slide-images .slide-image.current span {
+  z-index: 13;
+}
+
+#demoSliderContainer .options {
+  padding: 3px 10px;
+  text-align: center;
+}
+#demoSliderContainer .options a {
+  color: #91BECC;
+  font-family: Georgia,Serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+#demoSliderContainer .options a:hover {
+  color: #D3E5EB;
+}
+#demoSliderContainer .slide-pager a {
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#demoSliderContainer .slide-pager a.current {
+  background-color: #91BECC;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
+  padding: 0 4px;
+}
+#demoSliderContainer .options .prevSlide {
+  float: left;
+}
+#demoSliderContainer .options .nextSlide {
+  float: right;
+}
+
+ /*transition effect*/
+.slide-images .slide-image,
+.slide-images .slide-image img {
+   -moz-transition-duration: 1.5s;
+   -webkit-transition-duration: 1.5s;
+   -otransition-duration: 1.5s;
+   transition-duration: 1.5s;
+ }
+
+ .slide-images.transition-opacity .slide-image {
+   opacity: 0;
+   width: 0;
+ }
+
+ .slide-images.transition-opacity .slide-image.current {
+   opacity: 1;
+   width: 550px;
+ }
+
+ .slide-images.transition-left .slide-image {
+   left: -550px;
+   opacity: 0;
+ }
+
+ .slide-images.transition-left .slide-image.current {
+   left: 0;
+   opacity: 1;
+ }
+
+ .slide-images.transition-right .slide-image {
+   right: -550px;
+   opacity: 0;
+ }
+ .slide-images.transition-right .slide-image.current {
+   right: 0;
+   opacity: 1;
+ }
+
+
+ .slide-images.transition-top .slide-image {
+   opacity: 0;
+   top: -220px;
+ }
+ .slide-images.transition-top .slide-image.current {
+   opacity: 1;
+   top: 0;
+ }
+
+ .slide-images.transition-bottom .slide-image {
+   opacity: 0;
+   bottom: -220px;
+ }
+ .slide-images.transition-bottom .slide-image.current {
+   opacity: 1;
+   bottom: 0;
+ }
+
+ .slide-images.transition-cornerzoom .slide-image {
+   opacity: 0;
+ }
+
+ .slide-images.transition-cornerzoom .slide-image.current {
+   opacity: 1;
+ }
+
+ .slide-images.transition-cornerzoom .slide-image img {
+   width: 0;
+ }
+
+ .slide-images.transition-cornerzoom .slide-image.current img {
+   width: 550px;
+ }
+
+ .slide-images.transition-zoom .slide-image {
+   opacity: 0;
+ }
+ .slide-images.transition-zoom .slide-image.current {
+   opacity: 1;
+ }
+ .slide-images.transition-zoom .slide-image img {
+   left: -275px;
+   position: relative;
+   top: -110px;
+   width: 1100px;
+ }
+ .slide-images.transition-zoom .slide-image.current img {
+   left: 0;
+   top: 0;
+   width: 550px;
+ }
+
+ .slide-images.transition-dezoom .slide-image {
+   -moz-box-shadow: 2px 2px 8px black;
+   -webkit-box-shadow: 2px 2px 8px black;
+   box-shadow: 2px 2px 8px black;
+   opacity: 0;
+ }
+ .slide-images.transition-dezoom .slide-image.current {
+   opacity: 1;
+ }
+ .slide-images.transition-dezoom .slide-image img {
+   left: 275px;
+   position: relative;
+   top: 110px;
+   width: 0;
+ }
+ .slide-images.transition-dezoom .slide-image.current img {
+   left: 0;
+   top: 0;
+   width: 550px;
+ }
+
+ .slide-images.transition-rotate .slide-image {
+   opacity: 0;
+ }
+ .slide-images.transition-rotate .slide-image.current {
+   opacity: 1;
+ }
+ .slide-images.transition-rotate .slide-image img {
+   width: 550;
+   height: 220px;
+   position: relative;
+   left: -550px;
+   top: -220px;
+
+  }
+  .slide-images.transition-rotate .slide-image.current img {
+    width: 550px;
+    height: 220px;
+    left: 0;
+    top: 0;
+    -moz-transform: rotate(1440deg);
+    -webkit-transform: rotate(1440deg);
+    -o-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+
+
+  #options {
+     margin: 20px auto;
+     padding: 5px;
+     width: 550px;
+  }
+
+    </STYLE>
+</head>
+
+<body>
+   <div class="menu">
+    <ul class="clearfix">
+      <li class="item translate"><a href="#">Translate</a></li>
+      <li class="item translate-x"><a href="#">TranslateX</a></li>
+      <li class="item translate-y"><a href="#">TranslateY</a></li>
+      <li class="item rotate"><a href="#">Rotate</a></li>
+      <li class="item scale"><a href="#">Scale</a></li>
+      <li class="item scale-x"><a href="#">ScaleX</a></li>
+      <li class="item scale-y"><a href="#">ScaleY</a></li>
+      <li class="item skew"><a href="#">Skew</a></li>
+      <li class="item skew-x"><a href="#">SkewX</a></li>
+      <li class="item skew-y"><a href="#">SkewY</a></li>
+      <li class="item matrix"><a href="#">Matrix</a></li>
+    </ul>
+  </div>
+    <div class="testcss" id="unit1">
+        <a href="javascrip:void(0)">Test1</a>
+    </div>
+
+    <p></p>
+    <p></p>
+
+      <div id="demoSliderContainer">
+    <ul id="demoSlider" class="slide-images">
+      <li class="slide-image">
+        <img src="/images/m1.jpg" alt="monsters inc" />
+        <span>Monsters Inc</span>
+      </li>
+      <li class="slide-image">
+        <img src="/images/m2.jpg" alt="nemo" />
+        <span>Nemo</span>
+      </li>
+      <li class="slide-image">
+        <img src="/images/m3.jpg" alt="up" />
+        <span>Up</span>
+      </li>
+      <li class="slide-image">
+        <img src="/images/m4.jpg" alt="walle" />
+        <span>Wall-E</span>
+      </li>
+    </ul>
+    <div class="options">
+      <a href="javascript:;" class="prevSlide">Prev</a>
+      <span class="slide-pager">
+        <a href="" class="javascript:;">1</a>
+        <a href="" class="javascript:;">2</a>
+        <a href="" class="javascript:;">3</a>
+        <a href="" class="javascript:;">4</a>
+      </span>
+      <a href="javascript:;" class="nextSlide">Next</a>
+    </div>
+  </div>
+  <div id="options">
+     <label for="transitionEffect">Transition effect :</label>
+     <select id="transitionEffect">
+        <option value="transition-opacity">opacity fade</option>
+        <option value="transition-left">left slide</option>
+        <option value="transition-right">right slide</option>
+        <option value="transition-top">top slide</option>
+        <option value="transition-bottom">bottom slide</option>
+        <option value="transition-zoom">zoom</option>
+        <option value="transition-dezoom">de-zoom</option>
+        <option value="transition-cornerzoom">corner zoom</option>
+        <option value="transition-rotate">rotate</option>
+      </select>
+  </div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $(".slide-images").each(function(){
+        var slider = $(this);
+        var slides = $(".slide-image",slider);
+        var sliderPages = $(".slide-pager");
+
+        //Slide Navigation
+
+        var currentSlideNum = 0;
+        slides.removeClass("current");
+        slides.eq(currentSlideNum).addClass("current");
+        sliderPages.each(function(){
+          var pages = $("a",this);
+          pages.removeClass("current");
+          pages.eq(currentSlideNum).addClass("current");
+        });
+
+        var goToSlide = function(slideNum) {
+          slides.eq(currentSlideNum).removeClass("current");
+          slides.eq(slideNum).addClass("current");
+          sliderPages.each(function(){
+            var pages = $("a", this);
+            pages.eq(currentSlideNum).removeClass("current");
+            pages.eq(slideNum).addClass("current");
+          });
+          currentSlideNum = slideNum;
+        };
+
+        var nextSlide = function() {
+          var nextSlideNum = currentSlideNum + 1;
+          if(nextSlideNum >= slides.size())
+            nextSlideNum = 0;
+            goToSlide(nextSlideNum);
+
+        };
+
+        var prevSlide = function() {
+          var prevSlideNum = currentSlideNum - 1;
+          if(prevSlideNum < 0)
+            prevSlideNum = slides.size() - 1;
+            goToSlide(prevSlideNum);
+
+        };
+
+        //transition effects
+        var setTransitionEffect = function(transitionEffect) {
+          slider.attr("class","slide-images "+ transitionEffect);
+        };
+
+        $("#transitionEffect").change(function(){
+          setTransitionEffect($(this).val());
+        }).change();
+
+        //Navigation binding
+
+        $(".prevSlide").click(prevSlide);
+        $(".nextSlide").click(nextSlide);
+        $(".slide-pager a").each(function(i){
+          if(i >= slides.size()) return false;
+          $(this).click(function(){
+            goToSlide(i);
+          });
+        });
+
+        //Auto next slide
+
+        var lastHumanNav = 0;
+        $(".prevSlide, .nextSlide, .slide-pager a").click(function(){
+          lastHumanNav = new Date().getTime();
+        });
+        setInterval(function(){
+          var now = new Date().getTime();
+          if(now - lastHumanNav > 5000)
+            nextSlide();
+        },5000);
+      });
+    });
+
+</script>
+
+</body>
+</html>
