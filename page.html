@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hans">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap Starter Template</title>
+    <title>jQuery 插件训练！</title>
 
     <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,6 +17,22 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/js/sum.js"></script>
+        <script>
+    $(document).ready(function() {
+ var $inventory = $('#inventory tbody');
+  var quantities = $inventory.find('td:nth-child(2)')
+    .map(function(index, qty) {
+      return $(qty).text();
+    }).get();
+
+
+  var average = $.average(prices);
+  $('#sum').text($.sum(quantities));
+  $('#average').find('td:nth-child(3)').text(average.toFixed(2));
+});
+    </script>
 </head>
 
 <body>
@@ -42,20 +58,51 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-
-    <div class="container">
+<div class="container bs-docs-container">
+   <div class="row">
+        <div class="col-md-9" role="main">
         <br><br><br>
-        <h1>Bootstrap Starter Template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.
-            <br> All you get is this text and a mostly barebones HTML document.</p>
+          <table class="table table-condensed" id="inventory">
+  <thead>
+      
+      <tr>
+          <th>产品名称</th>
+          <th>规格</th>
+          <th>价格</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>产品ABC</td>
+          <td>GG:R-001</td>
+          <td>15.86</td>
+      </tr>
+       <tr>
+          <td>产品迭代</td>
+          <td>GG:R-002</td>
+          <td>24.00</td>
+      </tr>
+      <tr>
+          <td>产品迭代</td>
+          <td>GG:PC001</td>
+          <td>32.00</td>
+      </tr>
+      <tr class="active">
+          <td></td>
+          <td></td>
+          <td><spin id="sum"></spin></td>
+      </tr>
+  </tbody>
+</table>
+    </div></div>
+    <!-- /.row -->
+
     </div>
-    <!-- /.container -->
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
