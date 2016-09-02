@@ -1,5 +1,5 @@
 (function($) {
- $.extend({
+  $.extend({
     sum: function(array) {
       var total = 0;
 
