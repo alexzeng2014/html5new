@@ -84,17 +84,7 @@
       </tr>
   </tbody>
 </table>
-   <nav  style="text-align:center">
-  <ul class="pagination">
-    <li><a href="#">&laquo;</a></li>
-     <li class="active"><a>1 <span class="sr-only">(current)</span></a>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">&raquo;</a></li>
-  </ul>
-</nav>
+<nav  style="text-align:center" id="page_test"></nav>
 
     </div></div>
     <!-- /.row -->
@@ -104,8 +94,12 @@
          <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script src="assets/js/sum.js"></script>
        <script src="assets/js/shadow.js"></script>
+       <script src="assets/js/pages.js"></script>
         <script>
     $(document).ready(function() {
+        $("#page_test").pages({
+            total:8
+        });
  var $inventory = $('#inventory tbody');
   var quantities = $inventory.find('td:nth-child(2)')
     .map(function(index, qty) {
