@@ -21,16 +21,18 @@
                 intbegin=0;
                 intend=options.total;
             }
-            else if(index_page<6 && options.total>=10){
-                 intbegin=0;
-                intend=options.total-10;
-            }
-            else if (index_page>options.total-10  && options.total>=10){
-                intbegin=options.total-10;
-                 intend=options.total-1;
-            }else{
-                intbegin=index_page-5;
-                intend=index_page+3;
+            else {
+                if (index_page<5){
+                    intbegin=0;
+                intend=9;
+                }else if(index_page>options.total-4){
+                     intbegin=options.total-9;
+                intend=options.total;
+                }else{
+                    intbegin=index_page-5;
+                intend=parseInt(index_page) +4;
+
+                }
             }
             $this_ul.append("<li><a href='#' value='1'>" + options.firstText + "</a></li>");
             for (var i = intbegin; i < intend; i++) {
